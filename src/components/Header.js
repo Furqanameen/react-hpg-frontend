@@ -48,24 +48,43 @@ const Header = () => {
 
         {/* Book Now Button */}
         <div className="mt-4 md:mt-0">
-          <a
-            href="#"
+          <button
+            onClick={() => alert("Booking functionality not yet implemented.")}
             className="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 text-sm md:text-lg"
           >
             Book Now
-          </a>
+          </button>
         </div>
       </div>
 
       {/* Navigation Bar */}
       <nav className="bg-red-600 text-white mt-2">
         <div className="container mx-auto flex flex-col md:flex-row justify-center items-center">
-          <ul className="flex flex-wrap justify-center">
+          <ul className="flex flex-wrap justify-center relative">
             <li><Link to="/" className="hover:underline p-3 md:p-4">Home</Link></li>
-            <li><Link to="/services" className="hover:underline p-3 md:p-4">Services</Link></li>
+
+            {/* Services Dropdown */}
+            <li className="relative group">
+              <span className="hover:underline p-3 md:p-4 cursor-pointer">Services</span>
+              <div className="absolute bg-white text-black p-2 mt-2 rounded shadow-lg z-10 hidden group-hover:block">
+                <Link to="/services/oilChange" className="block p-2 hover:bg-gray-200">Oil Change</Link>
+                <Link to="/services/tireRotation" className="block p-2 hover:bg-gray-200">Tire Rotation</Link>
+                {/* Add more services here */}
+              </div>
+            </li>
+
+            {/* Specializes Dropdown */}
+            <li className="relative group">
+              <span className="hover:underline p-3 md:p-4 cursor-pointer">Specializes</span>
+              <div className="absolute bg-white text-black p-2 mt-2 rounded shadow-lg z-10 hidden group-hover:block">
+                <Link to="/specializes/engineRepair" className="block p-2 hover:bg-gray-200">Engine Repair</Link>
+                <Link to="/specializes/bodyWork" className="block p-2 hover:bg-gray-200">Body Work</Link>
+                {/* Add more specializations here */}
+              </div>
+            </li>
+
             <li><Link to="/about" className="hover:underline p-3 md:p-4">About Us</Link></li>
             <li><Link to="/testimonials" className="hover:underline p-3 md:p-4">Testimonials</Link></li>
-            <li><Link to="/specializes" className="hover:underline p-3 md:p-4">Specializes</Link></li>
             <li><Link to="/blogs" className="hover:underline p-3 md:p-4">Blogs</Link></li>
             <li><Link to="/appointments" className="hover:underline p-3 md:p-4">Appointments</Link></li>
             <li><Link to="/contact" className="hover:underline p-3 md:p-4">Contact Info</Link></li>
