@@ -3,7 +3,7 @@
     width: 170px;
     height: 170%; /* Adjust height as needed */
     background: white;
-    z-index: 0; /* Set to -1 to ensure it stays behind all content */
+    z-index: -1; /* Set to -1 to ensure it stays behind all content */
     transform: rotate(-65deg);
     top: 0; /* Position it where the logo is */
     left: 0; /* Adjust left position as needed */
