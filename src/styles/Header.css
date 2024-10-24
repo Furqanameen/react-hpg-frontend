@@ -1,15 +1,47 @@
 .curve-top-left {
     position: absolute;
-    width: 170px;
-    height: 170%; /* Adjust height as needed */
+    width: 315px;
+    height: 270%; /* Adjust height as needed */
     background: white;
-    z-index: -1; /* Set to -1 to ensure it stays behind all content */
+    z-index: 0; /* Set to -1 to ensure it stays behind all content */
     transform: rotate(-65deg);
-    top: 0; /* Position it where the logo is */
-    left: 0; /* Adjust left position as needed */
+    top: -59px; /* Position it where the logo is */
+    left: -80px; /* Adjust left position as needed */
 }
 
 .custom-class {
     position: relative; /* Ensure this is positioned relative to allow absolute children to position correctly */
     z-index: 1; /* Keep this higher than the curve */
 }
+.logo-img{
+
+}
+
+/* For smaller screens (< 1023px) - break phone numbers and social icons into rows */
+@media (max-width: 1023px) {
+    .curve-top-left {
+        position: absolute;
+        width: 245px;
+        height: 214%;
+        background: white;
+        z-index: 0;
+        transform: rotate(-65deg);
+        top: -59px;
+        left: -80px;
+    }
+
+}
+
+.desktop-view {
+  padding-top: 0.5rem; /* 2 * 0.25rem */
+  padding-bottom: 0.5rem; /* 2 * 0.25rem */
+}
+
+/* Remove vertical padding for larger screens */
+@media (min-width: 768px) { /* Adjust the min-width as necessary */
+  .desktop-view {
+    padding-top: 0; /* Remove top padding */
+    padding-bottom: 0; /* Remove bottom padding */
+  }
+}
+
