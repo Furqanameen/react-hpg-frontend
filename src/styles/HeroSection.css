@@ -1,0 +1,4 @@
+.hero-section {
+    position: relative; /* Allows z-index to work */
+    z-index: 1; /* Ensure it stays above the curve */
+}
